@@ -19,13 +19,13 @@ jobs:
           dotnet-version: '8.0.x'
 
       - name: Restore dependencies
-        run: dotnet restore HotkeyPlayer/HotkeyPlayer.csproj
+        run: dotnet restore
 
       - name: Build
-        run: dotnet build HotkeyPlayer/HotkeyPlayer.csproj -c Release --no-restore
+        run: dotnet build -c Release --no-restore
 
       - name: Publish
-        run: dotnet publish HotkeyPlayer/HotkeyPlayer.csproj -c Release --no-build -o ./publish
+        run: dotnet publish -c Release --no-build -o ./publish
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
