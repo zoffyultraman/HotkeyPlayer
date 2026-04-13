@@ -17,6 +17,7 @@ public class MainForm : Form
 
     public MainForm()
     {
+        MessageBox.Show("MainForm 构造函数开始");
         Text = "HotkeyPlayer - 全局快捷键音频播放器";
         Width = 550;
         Height = 400;
